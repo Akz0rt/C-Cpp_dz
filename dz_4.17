@@ -1,0 +1,12 @@
+// 17з
+#include <iostream.h>
+void main(){
+ int n, k, x;
+ float S;
+ cin >> n >> x;
+ S = x;
+ for (k = 2; k <= n; k++){
+ S = 2*(S + (x ** float(k)) / float(k));
+ }
+ cout << S <<'\n';
+}

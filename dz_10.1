@@ -1,24 +1,29 @@
 #include<string.h>
 #include<stdio.h>
 #define N 200
-void main()
-{
-  int i;
+void main(){
+	int i,m;
 	char s[N], s1[N], s2[N];
 	char a[2];
 	strcpy(s, "");
 	a[1] = '\0';
-  printf("Введіть рядок1: ");
+	printf("Введіть рядок1: ");
 	gets(s1);
 	printf("Введіть рядок2: ");
 	gets(s2);
-	for (i = 0; i <= strlen(s1) - 1; i++){
+  printf("Введіть індекс для підстановки: ");
+  gets(m);
+	for (i = 0; i <= m; i++){
 		a[0] = s1[i];
 		strcat(s, a);
   }
-	for (i = 0; i <= strlen(s2) - 1; i++){
-		a[0] = s2[i];
-		strcat(s, a);
+		for (i = 0; i <= strlen(s2) - 1; i++){
+			a[0] = s2[i];
+			strcat(s, a);
+		}
+	for (i = m;  i <= strlen(s1) - 1; i++){
+		a[0] = s1[i];
+		strcat(s,a);
   }
 	printf(s);
 }
